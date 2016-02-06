@@ -16,5 +16,9 @@
     "url": "git+https://github.com/rbose85/batch-manager.git"
   },
   "author": "Rajiv Bose <rbose85@users.noreply.github.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^5.0.0"
+  }
 }

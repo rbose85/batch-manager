@@ -1,7 +1,15 @@
 {
   "root": true,
-  "extends": "airbnb",
+  "extends": "airbnb/legacy",
   "env": {
     "node": true
+  },
+  "rules": {
+    "comma-dangle": [
+      2,
+      "never"
+    ],
+    "func-names": 0,
+    "vars-on-top": 0
   }
 }
