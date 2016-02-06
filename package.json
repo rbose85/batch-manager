@@ -1,0 +1,20 @@
+{
+  "name": "batch-manager",
+  "version": "0.0.1",
+  "description": "Easily batch the execution of functions as promises.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "batch",
+    "promises",
+    "utility"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rbose85/batch-manager.git"
+  },
+  "author": "Rajiv Bose <rbose85@users.noreply.github.com>",
+  "license": "ISC"
+}
