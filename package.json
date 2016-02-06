@@ -17,6 +17,9 @@
   },
   "author": "Rajiv Bose <rbose85@users.noreply.github.com>",
   "license": "ISC",
+  "dependencies": {
+    "q": "^1.4.1"
+  },
   "devDependencies": {
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^5.0.0"
