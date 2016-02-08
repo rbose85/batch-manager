@@ -9,6 +9,7 @@
     "email": "project@hostname.com"
   },
   "files": [
+    "index.js",
     "lib"
   ],
   "homepage": "https://github.com/rbose85/batch-manager",
@@ -17,7 +18,7 @@
     "promises",
     "utility"
   ],
-  "main": "lib/index.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/rbose85/batch-manager.git"
