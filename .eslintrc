@@ -10,6 +10,10 @@
       "never"
     ],
     "func-names": 0,
+    "quotes": [
+      2,
+      "single"
+    ],
     "vars-on-top": 0
   }
 }
