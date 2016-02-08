@@ -5,3 +5,4 @@
 node_modules/
 
 # auto-generated project folders
+coverage/
