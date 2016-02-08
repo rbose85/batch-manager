@@ -3,6 +3,15 @@
   "version": "0.0.1",
   "description": "Easily batch the execution of functions as promises.",
   "author": "Rajiv Bose <rbose85@users.noreply.github.com>",
+  "contributors": [],
+  "bugs": {
+    "url": "https://github.com/rbose85/batch-manager/issues",
+    "email": "project@hostname.com"
+  },
+  "files": [
+    "lib"
+  ],
+  "homepage": "https://github.com/rbose85/batch-manager",
   "keywords": [
     "batch",
     "promises",
@@ -11,7 +20,7 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rbose85/batch-manager.git"
+    "url": "https://github.com/rbose85/batch-manager.git"
   },
   "scripts": {
     "prepublish": "gulp pre-publish",
