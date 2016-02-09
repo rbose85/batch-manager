@@ -24,7 +24,7 @@
     "url": "https://github.com/rbose85/batch-manager.git"
   },
   "scripts": {
-    "prepublish": "gulp pre-publish",
+    "prepublish": "gulp prepublish",
     "test": "gulp"
   },
   "license": "ISC",

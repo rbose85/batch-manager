@@ -22,7 +22,7 @@ gulp.task('nsp', function (cb) {
   nsp({ package: path.resolve('package.json') }, cb);
 });
 
-gulp.task('pre-test', function () {
+gulp.task('pretest', function () {
   return gulp.src('lib/**/*.js')
     .pipe(excludes())
     .pipe(istanbul({
@@ -31,7 +31,7 @@ gulp.task('pre-test', function () {
     .pipe(istanbul.hookRequire());
 });
 
-gulp.task('test', ['pre-test'], function (cb) {
+gulp.task('test', ['pretest'], function (cb) {
   var mochaErr;
 
   gulp.src('test/**/*.js')
@@ -55,5 +55,5 @@ gulp.task('coveralls', ['test'], function () {
     .pipe(coveralls());
 });
 
-gulp.task('pre-publish', ['nsp']);
+gulp.task('prepublish', ['nsp']);
 gulp.task('default', ['static', 'test', 'coveralls']);
