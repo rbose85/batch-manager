@@ -11,35 +11,31 @@ $ npm install --save batch-manager
 
 ```js
 var BatchManager = require('./BatchManager');
-var request = require('request');
 var Q = require('q');
+var request = Q.denodeify(require('request'));
 
-// Create a new `BatchManager` object, with a 5 task batch size.
-var bm = new BatchManager(5);
-
-var promisedRequest = function (options) {
-  var deferred = Q.defer();
-
-  request(options, deferred.makeNodeResolver());
-
-  return deferred.promise;
-};
 
 var httpGet = function (uri, options) {
   var opts = Object.assign({}, options, { method: 'GET', uri: uri });
 
-  return promisedRequest(opts)
+  return request(opts)
     .spread(function (resp) {
       return resp;
     });
 };
 
 
+// Create a new `BatchManager` object, with a 5 task batch size.
+var bm = new BatchManager(5);
+
 for (var i = 0; i < 20; i++) {
   var args = ['http://api.randomuser.me/', { qs: { gender: 'female' } }];
+
+  // Add functions to the `BatchManager`'s internal queue.
   bm.add(httpGet, args);
 }
 
+// Launch the `BatchManager` into action - the queued set of functions are invoked in batches.
 bm.run()
   .then(function (responses) {
     return Q.all(responses.map(function (resp) {
