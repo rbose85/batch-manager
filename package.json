@@ -1,6 +1,6 @@
 {
   "name": "batch-manager",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Easily batch the execution of functions as promises.",
   "author": "Rajiv Bose <rbose85@users.noreply.github.com> (https://twitter.com/rbose85)",
   "contributors": [],
